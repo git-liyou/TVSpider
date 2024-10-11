@@ -28,7 +28,7 @@ jobs:
         run: |
           cp -r ./tmp ./code
           cd code
-          pip install -r requirements.txt
+          pip install -r requirements.txt --break-system-packages
           python build.py --aliToken "${{ secrets.ALI_TOKEN }}" --biliCookie "${{ secrets.BILI_COOKIE}}"  --quarkCookie "${{ secrets.QUARK_COOKIE}}"
           python build.py --aliToken "${{ secrets.ALI_TOKEN }}" --biliCookie "${{ secrets.BILI_COOKIE}}"  --quarkCookie "${{ secrets.QUARK_COOKIE}}" --is_18 True
 
